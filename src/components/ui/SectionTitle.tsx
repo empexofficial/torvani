@@ -1,0 +1,40 @@
+import AnimatedSection from "./AnimatedSection";
+
+interface SectionTitleProps {
+    label?: string;
+    title: string;
+    subtitle?: string;
+    align?: "left" | "center";
+    className?: string;
+}
+
+export default function SectionTitle({
+    label,
+    title,
+    subtitle,
+    align = "center",
+    className = "",
+}: SectionTitleProps) {
+    const alignClass = align === "center" ? "text-center items-center" : "text-left items-start";
+
+    return (
+        <AnimatedSection
+            className={`flex flex-col gap-4 mb-12 md:mb-16 ${alignClass} ${className}`}
+        >
+            {label && (
+                <span className="text-xs font-body font-semibold tracking-[0.3em] uppercase text-gold-400">
+                    {label}
+                </span>
+            )}
+            <div className="gold-line mx-auto" style={align === "left" ? { margin: 0 } : {}} />
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ivory-50 leading-tight tracking-tight">
+                {title}
+            </h2>
+            {subtitle && (
+                <p className="text-ivory-400 font-body text-base md:text-lg max-w-2xl leading-relaxed">
+                    {subtitle}
+                </p>
+            )}
+        </AnimatedSection>
+    );
+}
