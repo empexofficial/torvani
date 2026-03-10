@@ -21,9 +21,10 @@
     font-family: "Inter", system-ui, sans-serif;
   }
 
-  /* All display-font headings render uppercase */
+  /* All display-font headings render uppercase at native weight */
   .font-display {
     text-transform: uppercase;
+    font-weight: 400 !important;
   }
 
   ::selection {
