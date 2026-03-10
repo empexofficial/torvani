@@ -21,6 +21,11 @@
     font-family: "Inter", system-ui, sans-serif;
   }
 
+  /* All display-font headings render uppercase */
+  .font-display {
+    text-transform: uppercase;
+  }
+
   ::selection {
     background-color: rgba(199, 137, 24, 0.3);
     color: #fcdc68;

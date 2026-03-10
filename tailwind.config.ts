@@ -45,7 +45,7 @@ const config: Config = {
                 },
             },
             fontFamily: {
-                display: ['"area-normal"', "serif"],
+                display: ['"din-condensed"', "sans-serif"],
                 body: ["Inter", "system-ui", "sans-serif"],
             },
             backgroundImage: {
