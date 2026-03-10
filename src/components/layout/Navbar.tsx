@@ -10,7 +10,7 @@ import Button from "@/components/ui/Button";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileOpen, setIsMobileOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -22,11 +22,11 @@ export default function Navbar() {
     }, []);
 
     useEffect(() => {
-        setIsMobileOpen(false);
+        setIsMenuOpen(false);
     }, [pathname]);
 
     useEffect(() => {
-        if (isMobileOpen) {
+        if (isMenuOpen) {
             document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "";
@@ -34,72 +34,65 @@ export default function Navbar() {
         return () => {
             document.body.style.overflow = "";
         };
-    }, [isMobileOpen]);
+    }, [isMenuOpen]);
 
     return (
         <>
             <nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-                        ? "bg-obsidian/95 backdrop-blur-xl border-b border-white/5 py-3"
-                        : "bg-transparent py-5"
+                    ? "bg-obsidian/95 backdrop-blur-xl border-b border-white/5 py-3"
+                    : "bg-transparent py-5"
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-                    {/* Logo */}
+                    {/* Left — Hamburger Menu */}
+                    <div className="flex-1 flex items-center">
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="relative z-10 p-2 -ml-2 flex items-center gap-2 text-ivory-100 hover:text-gold-200 transition-colors cursor-pointer"
+                            aria-label="Toggle menu"
+                        >
+                            {isMenuOpen ? (
+                                <X className="w-6 h-6" />
+                            ) : (
+                                <Menu className="w-6 h-6" />
+                            )}
+                            <span className="font-body text-xs tracking-[0.2em] uppercase">
+                                Menu
+                            </span>
+                        </button>
+                    </div>
+
+                    {/* Center — Logo */}
                     <Link href="/" className="relative z-10">
-                        <span className="font-display text-2xl md:text-3xl font-bold tracking-[0.15em] uppercase text-ivory-50">
+                        <span className="font-display text-2xl md:text-3xl tracking-[0.15em] uppercase text-ivory-50">
                             Torvani
                         </span>
                     </Link>
 
-                    {/* Desktop Nav */}
-                    <div className="hidden lg:flex items-center gap-8">
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className={`font-body text-sm tracking-wider uppercase transition-colors duration-300 ${pathname === link.href
-                                        ? "text-gold-300"
-                                        : "text-ivory-300 hover:text-gold-200"
-                                    }`}
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
+                    {/* Right — Book Now */}
+                    <div className="flex-1 flex items-center justify-end">
                         <Button href="/booking" size="sm">
                             Book Now
                         </Button>
                     </div>
-
-                    {/* Mobile Menu Toggle */}
-                    <button
-                        onClick={() => setIsMobileOpen(!isMobileOpen)}
-                        className="lg:hidden relative z-10 p-2 text-ivory-100 hover:text-gold-200 transition-colors cursor-pointer"
-                        aria-label="Toggle menu"
-                    >
-                        {isMobileOpen ? (
-                            <X className="w-6 h-6" />
-                        ) : (
-                            <Menu className="w-6 h-6" />
-                        )}
-                    </button>
                 </div>
             </nav>
 
-            {/* Mobile Menu */}
+            {/* Fullscreen Menu Overlay */}
             <AnimatePresence>
-                {isMobileOpen && (
+                {isMenuOpen && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 z-40 lg:hidden"
+                        className="fixed inset-0 z-40"
                     >
                         {/* Backdrop */}
                         <div
                             className="absolute inset-0 bg-obsidian/98 backdrop-blur-2xl"
-                            onClick={() => setIsMobileOpen(false)}
+                            onClick={() => setIsMenuOpen(false)}
                         />
 
                         {/* Menu Content */}
@@ -119,11 +112,11 @@ export default function Navbar() {
                                 >
                                     <Link
                                         href={link.href}
-                                        className={`font-display text-3xl font-bold tracking-wider uppercase transition-colors duration-300 ${pathname === link.href
-                                                ? "gold-gradient-text"
-                                                : "text-ivory-200 hover:text-gold-200"
+                                        className={`font-display text-3xl tracking-wider uppercase transition-colors duration-300 ${pathname === link.href
+                                            ? "gold-gradient-text"
+                                            : "text-ivory-200 hover:text-gold-200"
                                             }`}
-                                        onClick={() => setIsMobileOpen(false)}
+                                        onClick={() => setIsMenuOpen(false)}
                                     >
                                         {link.label}
                                     </Link>
