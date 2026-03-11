@@ -32,13 +32,13 @@ export default function CTABlock({
                 backgroundImage: "radial-gradient(circle at 50% 50%, #c78918 0%, transparent 70%)",
             }} />
 
-            <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+            <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
                 <AnimatedSection>
                     <div className="gold-line mx-auto mb-8" />
-                    <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ivory-50 mb-6 leading-tight">
+                    <h2 className="font-display text-5xl md:text-7xl lg:text-[7.5rem] font-bold text-ivory-50 mb-6 leading-[0.9] tracking-tighter uppercase">
                         {title}
                     </h2>
-                    <p className="text-ivory-300 font-body text-lg md:text-xl mb-10 leading-relaxed">
+                    <p className="text-ivory-300 font-body text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
                         {subtitle}
                     </p>
                     <Button href={buttonHref} size="lg">
