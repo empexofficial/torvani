@@ -71,7 +71,13 @@ export default function Navbar() {
                     </Link>
 
                     {/* Right — Book Now */}
-                    <div className="flex-1 flex items-center justify-end">
+                    <div className="flex-1 flex items-center justify-end gap-6">
+                        <a
+                            href="tel:+16021112222"
+                            className="hidden md:block font-body text-sm font-semibold tracking-widest text-white hover:text-gold-200 transition-colors"
+                        >
+                            (602) 111-2222
+                        </a>
                         <Button href="/booking" variant="solid" size="sm">
                             Book Now
                         </Button>
@@ -126,8 +132,14 @@ export default function Navbar() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.4 }}
-                                className="mt-4"
+                                className="mt-4 flex flex-col items-center gap-6"
                             >
+                                <a
+                                    href="tel:+16021112222"
+                                    className="font-body text-lg font-semibold tracking-widest text-white hover:text-gold-200 transition-colors"
+                                >
+                                    (602) 111-2222
+                                </a>
                                 <Button href="/booking" variant="solid" size="lg">
                                     Book Your Detail
                                 </Button>

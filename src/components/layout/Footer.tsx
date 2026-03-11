@@ -73,12 +73,11 @@ export default function Footer() {
                         </h4>
                         <ul className="space-y-3 font-body text-sm text-ivory-400">
                             <li>
-                                {/* PLACEHOLDER: Replace with real phone number */}
                                 <a
-                                    href="tel:+15551234567"
+                                    href="tel:+16021112222"
                                     className="hover:text-gold-300 transition-colors duration-300"
                                 >
-                                    (555) 123-4567
+                                    (602) 111-2222
                                 </a>
                             </li>
                             <li>

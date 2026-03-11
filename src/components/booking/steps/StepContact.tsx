@@ -131,7 +131,7 @@ export default function StepContact({
                         <label className={labelClasses}>Phone *</label>
                         <input
                             {...register("phone")}
-                            placeholder="(555) 123-4567"
+                            placeholder="(602) 111-2222"
                             type="tel"
                             className={inputClasses}
                         />
