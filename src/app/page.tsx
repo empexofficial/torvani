@@ -226,11 +226,11 @@ export default function HomePage() {
                 <div className="flex gap-6 md:gap-8 mb-10 last:mb-0">
                   {/* Step number */}
                   <div className="flex flex-col items-center">
-                    <div className="w-12 h-12 rounded-full gold-gradient-bg flex items-center justify-center text-obsidian font-display font-bold text-lg flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-black border border-white/10 flex items-center justify-center text-ivory-100 font-display font-bold text-lg flex-shrink-0">
                       {step.step}
                     </div>
                     {index < processSteps.length - 1 && (
-                      <div className="w-px flex-1 mt-3 bg-gradient-to-b from-gold-500/30 to-transparent" />
+                      <div className="w-px flex-1 mt-3 bg-gradient-to-b from-white/20 to-transparent" />
                     )}
                   </div>
                   {/* Content */}
