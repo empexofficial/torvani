@@ -1,5 +1,19 @@
-import { Star } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
+
+function PointyStar({ className }: { className?: string }) {
+    return (
+        <svg
+            viewBox="0 0 24 24"
+            className={className}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M12 1l3.09 6.26L22 8.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 13.14l-5-4.87 6.91-1.01L12 1z"
+                fill="currentColor"
+            />
+        </svg>
+    );
+}
 
 interface TestimonialCardProps {
     name: string;
@@ -24,9 +38,9 @@ export default function TestimonialCard({
                 {/* Rating */}
                 <div className="flex gap-1 mb-6">
                     {Array.from({ length: rating }).map((_, i) => (
-                        <Star
+                        <PointyStar
                             key={i}
-                            className="w-4 h-4 fill-gold-400 text-gold-400"
+                            className="w-4 h-4 text-gold-500"
                         />
                     ))}
                 </div>
@@ -37,7 +51,7 @@ export default function TestimonialCard({
                 </blockquote>
 
                 {/* Divider */}
-                <div className="w-full h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent mb-6" />
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-6" />
 
                 {/* Client */}
                 <div className="flex justify-between items-end">
@@ -47,7 +61,7 @@ export default function TestimonialCard({
                         </p>
                         <p className="font-body text-sm text-ivory-400">{vehicle}</p>
                     </div>
-                    <span className="text-xs font-body font-semibold tracking-wider uppercase text-gold-500/60">
+                    <span className="text-xs font-body font-semibold tracking-wider uppercase text-white/50">
                         {service}
                     </span>
                 </div>
