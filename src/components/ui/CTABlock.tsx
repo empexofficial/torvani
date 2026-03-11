@@ -12,7 +12,7 @@ interface CTABlockProps {
 export default function CTABlock({
     title = "Ready to Elevate Your Vehicle?",
     subtitle = "Experience the Torvani difference. Book your appointment today and discover what true automotive care looks like.",
-    buttonText = "Book Your Detail",
+    buttonText = "Reserve Appointment",
     buttonHref = "/booking",
     className = "",
 }: CTABlockProps) {
@@ -41,7 +41,7 @@ export default function CTABlock({
                     <p className="text-ivory-300 font-body text-lg md:text-xl mb-10 leading-relaxed max-w-2xl mx-auto">
                         {subtitle}
                     </p>
-                    <Button href={buttonHref} size="lg">
+                    <Button href={buttonHref} size="md">
                         {buttonText}
                     </Button>
                 </AnimatedSection>
