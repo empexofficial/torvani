@@ -279,7 +279,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FAQ ── */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-black">
         <div className="max-w-3xl mx-auto px-6">
           <SectionTitle
             label="Questions"
