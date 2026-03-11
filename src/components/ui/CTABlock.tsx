@@ -34,7 +34,6 @@ export default function CTABlock({
 
             <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
                 <AnimatedSection>
-                    <div className="gold-line mx-auto mb-8" />
                     <h2 className="font-display text-5xl md:text-7xl lg:text-[7.5rem] font-bold text-ivory-50 mb-6 leading-[0.9] tracking-tighter uppercase">
                         {title}
                     </h2>

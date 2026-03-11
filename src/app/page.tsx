@@ -294,7 +294,7 @@ export default function HomePage() {
 
       {/* ── Final CTA ── */}
       <CTABlock
-        title="Experience the Torvani Difference"
+        title="Elevate Your Vehicle"
         subtitle="Your vehicle deserves world-class care. Book your appointment today and discover what true automotive craftsmanship looks like."
         buttonText="Reserve Your Appointment"
       />
