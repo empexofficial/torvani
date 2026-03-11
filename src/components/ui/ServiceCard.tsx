@@ -32,7 +32,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
     return (
         <AnimatedSection delay={index * 0.15}>
-            <Link href={href} className="group block relative aspect-square md:aspect-[4/5] overflow-hidden rounded-xl bg-obsidian-900 shadow-2xl">
+            <Link href={href} className="group block relative aspect-square overflow-hidden rounded-xl bg-obsidian-900 shadow-2xl">
                 {/* Background Image */}
                 <div
                     className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
