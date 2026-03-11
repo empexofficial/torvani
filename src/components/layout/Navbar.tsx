@@ -145,7 +145,7 @@ export default function Navbar() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                        className="fixed inset-0 z-40 flex flex-col pt-24 md:pt-0"
+                        className="fixed inset-0 z-[45] flex flex-col pt-24 md:pt-0"
                     >
                         {/* Base Backdrop (visible on mobile or briefly during transition) */}
                         <div className="absolute inset-0 bg-white" />
