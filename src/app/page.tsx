@@ -138,7 +138,7 @@ export default function HomePage() {
             variant="dark"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {galleryImages.slice(0, 3).map((image, index) => (
+            {galleryImages.slice(0, 6).map((image, index) => (
               <GalleryItem
                 key={image.id}
                 src={image.src}
@@ -149,9 +149,9 @@ export default function HomePage() {
               />
             ))}
           </div>
-          <AnimatedSection className="text-center mt-12">
-            <Button href="/gallery" variant="outline" className="border-obsidian text-obsidian hover:bg-obsidian hover:text-white">
-              View Full Gallery
+          <AnimatedSection className="text-center mt-16">
+            <Button href="/gallery" variant="dark">
+              View All Work
             </Button>
           </AnimatedSection>
         </div>

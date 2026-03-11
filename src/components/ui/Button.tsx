@@ -3,7 +3,7 @@ import Link from "next/link";
 interface ButtonProps {
     children: React.ReactNode;
     href?: string;
-    variant?: "primary" | "outline" | "ghost" | "solid";
+    variant?: "primary" | "outline" | "ghost" | "solid" | "dark";
     size?: "sm" | "md" | "lg";
     className?: string;
     onClick?: () => void;
@@ -39,6 +39,8 @@ export default function Button({
             "border-2 border-white/50 text-white hover:border-white hover:bg-white/5",
         ghost:
             "text-ivory-200 hover:text-white hover:bg-white/5",
+        dark:
+            "bg-obsidian text-white hover:bg-black border-2 border-obsidian shadow-sm hover:shadow-md",
     };
 
     const disabledStyles = disabled
