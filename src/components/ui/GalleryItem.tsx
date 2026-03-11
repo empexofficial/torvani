@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 interface GalleryItemProps {
@@ -19,52 +21,33 @@ export default function GalleryItem({
     index = 0,
     onClick,
 }: GalleryItemProps) {
-    const categoryLabels: Record<string, string> = {
-        exterior: "Exterior",
-        interior: "Interior",
-        "paint-correction": "Paint Correction",
-        "ceramic-coating": "Ceramic Coating",
-    };
-
     return (
         <AnimatedSection delay={index * 0.08}>
             <div
                 onClick={onClick}
-                className="group relative aspect-[4/3] overflow-hidden cursor-pointer bg-obsidian-100"
+                className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer bg-obsidian-100"
             >
-                {/* Placeholder image styling */}
-                <div className="absolute inset-0 bg-gradient-to-br from-obsidian-100 to-obsidian-300 flex items-center justify-center">
-                    <div className="text-center">
-                        <div className="w-12 h-12 mx-auto mb-3 rounded-full gold-gradient-bg opacity-20" />
-                        <p className="text-ivory-400/40 text-xs font-body uppercase tracking-wider">
-                            {alt}
-                        </p>
-                    </div>
+                {/* Background Image / Placeholder */}
+                <div className="absolute inset-0 bg-obsidian-200">
+                    <Image
+                        src={src}
+                        alt={alt}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
                 </div>
 
-                {/* If real images exist, uncomment:
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-110"
-        /> */}
+                {/* Gradient Overlay for bottom text readability */}
+                <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/80 to-transparent opacity-80" />
 
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                {/* Category badge */}
-                <div className="absolute top-4 left-4 px-3 py-1.5 bg-obsidian/70 backdrop-blur-sm rounded-sm">
-                    <span className="text-xs font-body font-semibold tracking-wider uppercase text-gold-300">
-                        {categoryLabels[category] || category}
-                    </span>
-                </div>
-
-                {/* Title on hover */}
-                <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                    <h3 className="font-display text-xl font-bold text-ivory-50">
-                        {title}
+                {/* Content Container */}
+                <div className="absolute inset-0 p-8 flex items-end justify-between">
+                    <h3 className="font-display text-2xl md:text-3xl font-bold text-white leading-tight">
+                        {title}.
                     </h3>
+                    <div className="w-10 h-10 flex items-center justify-center text-white opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                        <ArrowRight className="w-6 h-6" />
+                    </div>
                 </div>
             </div>
         </AnimatedSection>

@@ -128,12 +128,11 @@ export default function HomePage() {
       </section>
 
       {/* ── Gallery Preview ── */}
-      <section className="py-24 md:py-32 bg-obsidian-200/50">
+      <section className="py-24 md:py-32 bg-white">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
-            label="Our Work"
             title="The Portfolio"
-            subtitle="A curated selection of transformations and the artistry behind every detail."
+            variant="dark"
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {galleryImages.slice(0, 4).map((image, index) => (
@@ -148,7 +147,7 @@ export default function HomePage() {
             ))}
           </div>
           <AnimatedSection className="text-center mt-12">
-            <Button href="/gallery" variant="outline">
+            <Button href="/gallery" variant="outline" className="border-obsidian text-obsidian hover:bg-obsidian hover:text-white">
               View Full Gallery
             </Button>
           </AnimatedSection>
