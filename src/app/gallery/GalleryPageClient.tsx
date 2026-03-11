@@ -40,8 +40,8 @@ export default function GalleryPageClient() {
                                 key={cat.id}
                                 onClick={() => setActiveCategory(cat.id)}
                                 className={`px-5 py-2.5 font-body text-xs tracking-wider uppercase transition-all duration-300 cursor-pointer ${activeCategory === cat.id
-                                        ? "gold-gradient-bg text-obsidian font-semibold"
-                                        : "text-ivory-400 hover:text-gold-200 border border-white/10 hover:border-gold-500/30"
+                                    ? "gold-gradient-bg text-obsidian font-semibold"
+                                    : "text-ivory-400 hover:text-gold-200 border border-white/10 hover:border-gold-500/30"
                                     }`}
                             >
                                 {cat.label}
