@@ -65,54 +65,48 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Brand Positioning ── */}
-      <section className="py-24 md:py-32 relative">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <AnimatedSection>
-              <span className="block text-3xl font-colbiac text-gold-400 mb-4 lowercase first-letter:uppercase">
-                The Torvani Standard
-              </span>
-              <div className="gold-line mb-8" />
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ivory-50 mb-6 leading-tight">
-                Where Precision
-                <br />
-                Meets Passion
-              </h2>
-              <p className="font-body text-ivory-300 text-lg leading-relaxed mb-6">
-                Torvani was founded on a singular belief: every vehicle deserves
-                to be treated as a masterpiece. Our team of certified detailing
-                artisans combines decades of experience with an unrelenting
-                pursuit of perfection.
-              </p>
-              <p className="font-body text-ivory-400 leading-relaxed">
-                From daily driven luxury sedans to million-dollar exotics, we
-                apply the same obsessive attention to detail — the same
-                world-class products, the same refined techniques, the same
-                uncompromising standard. Because anything less simply isn&apos;t
-                Torvani.
-              </p>
-            </AnimatedSection>
+      {/* ── Quote Section ── */}
+      <section className="py-20 md:py-32 bg-black relative flex items-center justify-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <AnimatedSection>
+            <p className="font-colbiac text-4xl md:text-6xl lg:text-[5.5rem] text-ivory-50 leading-relaxed md:leading-tight">
+              If comparable, it is no longer Bugatti
+            </p>
+          </AnimatedSection>
+        </div>
+      </section>
 
-            <AnimatedSection delay={0.2} className="relative">
-              {/* Placeholder for brand/studio image */}
-              <div className="aspect-[4/5] bg-gradient-to-br from-obsidian-100 to-obsidian-300 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-full gold-gradient-bg opacity-15" />
-                    <p className="text-ivory-400/30 text-xs font-body uppercase tracking-wider px-8">
-                      Premium studio/craftsmanship image
-                    </p>
-                  </div>
-                </div>
-                {/* Decorative gold corner */}
-                <div className="absolute top-0 right-0 w-24 h-24">
-                  <div className="absolute top-0 right-0 w-full h-px gold-gradient-bg opacity-40" />
-                  <div className="absolute top-0 right-0 h-full w-px gold-gradient-bg opacity-40" />
-                </div>
-              </div>
-            </AnimatedSection>
-          </div>
+      {/* ── Brand Positioning ── */}
+      <section className="py-24 md:py-32 bg-black flex items-center justify-center overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 w-full">
+          <AnimatedSection className="relative aspect-[16/9] md:aspect-[21/9] w-full rounded-2xl overflow-hidden shadow-2xl group">
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+              style={{ backgroundImage: 'url("https://1clfha3f90.ucarecd.net/2f345942-ea6c-4064-888a-ee6b28b6614c/TovoniWebsiteImage1.jpg")' }}
+            />
+
+            {/* Dark Overlay for depth and readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60" />
+
+            {/* Content Container */}
+            <div className="relative z-10 h-full w-full flex flex-col items-center justify-center text-center px-6">
+              {/* The brand name in script/cursive font */}
+              <h2 className="font-colbiac text-6xl md:text-8xl lg:text-[7.5rem] text-white drop-shadow-xl mb-4 lowercase first-letter:uppercase leading-none">
+                Torvani
+              </h2>
+
+              {/* The subtitle / tagline */}
+              <p className="font-body text-[10px] md:text-xs text-ivory-300 tracking-[0.25em] md:tracking-[0.4em] mb-10 uppercase font-medium">
+                ROOTED IN TRADITION. BUILT TO LEAVE A LEGACY.
+              </p>
+
+              {/* Discovery Button */}
+              <Button href="/services" variant="outline" className="rounded-full px-10 py-3 text-[10px] tracking-[0.2em] text-white border-white/40 hover:bg-white hover:text-black transition-all duration-500 uppercase font-semibold">
+                Discover the Torvani Standard
+              </Button>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
