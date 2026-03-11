@@ -17,14 +17,22 @@ export default function CTABlock({
     className = "",
 }: CTABlockProps) {
     return (
-        <section className={`py-24 md:py-32 relative overflow-hidden ${className}`}>
-            {/* Background accent */}
-            <div className="absolute inset-0 bg-gradient-to-b from-obsidian-200 via-obsidian to-obsidian-200" />
-            <div className="absolute inset-0 opacity-[0.03]" style={{
-                backgroundImage: "radial-gradient(circle at 50% 50%, #c78918 0%, transparent 50%)",
+        <section className={`py-48 md:py-64 relative overflow-hidden flex items-center justify-center ${className}`}>
+            {/* Background Image with Overlay */}
+            <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000"
+                style={{
+                    backgroundImage: 'url("https://1clfha3f90.ucarecd.net/f6403327-09d1-4a56-94ae-64a7fb522c67/TorvaniWebsiteImage5.jpg")',
+                }}
+            />
+            <div className="absolute inset-0 bg-black/60" />
+
+            {/* Ambient accent */}
+            <div className="absolute inset-0 opacity-[0.05]" style={{
+                backgroundImage: "radial-gradient(circle at 50% 50%, #c78918 0%, transparent 70%)",
             }} />
 
-            <div className="relative max-w-3xl mx-auto px-6 text-center">
+            <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
                 <AnimatedSection>
                     <div className="gold-line mx-auto mb-8" />
                     <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ivory-50 mb-6 leading-tight">
