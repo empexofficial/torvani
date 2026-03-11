@@ -60,7 +60,7 @@ export default function ServiceCard({
                     <div className="flex items-center justify-between pt-2 transition-transform duration-500 group-hover:-translate-y-1">
                         <div className="flex flex-col">
                             <span className="text-[10px] text-white/40 uppercase tracking-[0.15em] font-body mb-1">Starting At</span>
-                            <span className="text-gold-400 font-display font-bold text-lg tracking-wider">{price.toUpperCase()}</span>
+                            <span className="text-white font-display font-bold text-lg tracking-wider">{price.toUpperCase()}</span>
                         </div>
                         <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white transition-all duration-300 group-hover:bg-white group-hover:text-obsidian group-hover:border-white">
                             <ArrowRight className="w-6 h-6" />
