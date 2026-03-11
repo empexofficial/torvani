@@ -52,7 +52,7 @@ export default function HomePage() {
               Obsessive craftsmanship meets automotive excellence. We don&apos;t just detail vehicles — we elevate them to art.
             </p>
             <div className="flex justify-center">
-              <Button href="/booking" variant="outline" className="rounded-full !px-10 !py-3.5 text-xs tracking-widest uppercase border-white/50 text-white hover:bg-white hover:text-obsidian-900 hover:border-white transition-all duration-300">
+              <Button href="/booking">
                 Book Your Detail
               </Button>
             </div>
