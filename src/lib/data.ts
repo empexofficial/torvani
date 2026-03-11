@@ -70,7 +70,7 @@ export const services: Service[] = [
             "Meticulous interior and exterior detailing that restores your vehicle to showroom perfection. Every surface, every crevice — elevated.",
         icon: "sparkles",
         href: "/services/auto-detailing",
-        image: "/images/services/detailing.png",
+        image: "https://1clfha3f90.ucarecd.net/5b46d6a1-26bc-4236-bf98-8f9c6cbe361f/TorvaniWebsiteImage4.jpg",
         badge: "Artisan Standard",
         price: "From $299",
         modelName: "Detailing",
