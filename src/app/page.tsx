@@ -15,6 +15,7 @@ import {
   processSteps,
 } from "@/lib/data";
 import { Shield, Award, Clock, Gem } from "lucide-react";
+import FloatingActionButtons from "@/components/ui/FloatingActionButtons";
 
 export const metadata: Metadata = {
   title: "Torvani — Premium Automotive Detailing & Ceramic Coating",
@@ -296,6 +297,7 @@ export default function HomePage() {
         subtitle="Your vehicle deserves world-class care. Book your appointment today and discover what true automotive craftsmanship looks like."
         buttonText="Reserve Your Appointment"
       />
+      <FloatingActionButtons />
     </div>
   );
 }
