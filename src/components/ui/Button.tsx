@@ -32,9 +32,9 @@ export default function Button({
 
     const variantStyles = {
         primary:
-            "border border-white/50 text-white hover:bg-white hover:text-obsidian-900 hover:border-white shadow-sm hover:shadow-md",
+            "border-2 border-white/50 text-white hover:bg-white hover:text-obsidian-900 hover:border-white shadow-sm hover:shadow-md",
         outline:
-            "border border-white/50 text-white hover:border-white hover:bg-white/5",
+            "border-2 border-white/50 text-white hover:border-white hover:bg-white/5",
         ghost:
             "text-ivory-200 hover:text-white hover:bg-white/5",
     };
