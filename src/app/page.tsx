@@ -163,7 +163,6 @@ export default function HomePage() {
           </div>
           <SectionTitle
             title="The Torvani Difference"
-            subtitle="We don't cut corners. We don't rush. We don't compromise."
             variant="dark"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
