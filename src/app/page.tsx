@@ -43,9 +43,6 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-8xl mx-auto px-6 w-full text-center">
           <AnimatedSection className="max-w-5xl mx-auto flex flex-col items-center mt-16 md:mt-24">
-            <span className="block text-4xl md:text-5xl lg:text-6xl font-colbiac text-white mb-4 lowercase first-letter:uppercase drop-shadow-md">
-              Auto Detailing Done Right
-            </span>
             <h1 className="font-display text-5xl md:text-7xl lg:text-[6rem] font-bold text-white mb-6 leading-none tracking-wide uppercase">
               Your Car, Our Canvas
             </h1>
@@ -162,7 +159,6 @@ export default function HomePage() {
       <section className="py-24 md:py-32 bg-ivory-300">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
-            label="Why Torvani"
             title="The Torvani Difference"
             subtitle="We don't cut corners. We don't rush. We don't compromise."
             variant="dark"
@@ -217,7 +213,6 @@ export default function HomePage() {
       <section className="py-24 md:py-32 bg-obsidian-200/50">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
-            label="Our Process"
             title="Craftsmanship, Refined"
             subtitle="Every Torvani detail follows a meticulous process designed to deliver perfection at every stage."
           />
@@ -254,7 +249,6 @@ export default function HomePage() {
       <section className="py-24 md:py-32">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
-            label="Client Experiences"
             title="What Our Clients Say"
             subtitle="Don't take our word for it. Hear from the owners who've experienced the Torvani standard."
           />
@@ -283,7 +277,6 @@ export default function HomePage() {
       <section className="py-24 md:py-32 bg-black">
         <div className="max-w-3xl mx-auto px-6">
           <SectionTitle
-            label="Questions"
             title="Frequently Asked"
             subtitle="Everything you need to know about our services, process, and what makes Torvani different."
           />
