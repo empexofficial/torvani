@@ -128,7 +128,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Gallery Preview ── */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-24 md:py-32 bg-white text-obsidian">
         <div className="max-w-8xl mx-auto px-6">
           <div className="flex flex-col items-center mb-8">
             <div className="w-px h-16 bg-gradient-to-b from-obsidian/60 to-transparent animate-pulse" />
@@ -157,24 +157,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Quote Section ── */}
-      <section className="py-20 md:py-32 bg-black relative flex items-center justify-center">
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <AnimatedSection>
-            <p className="font-colbiac text-4xl md:text-6xl lg:text-[5.5rem] text-ivory-50 leading-relaxed md:leading-tight">
-              If comparable, it is no longer Bugatti
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* ── Why Choose Torvani ── */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 bg-ivory-300">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Why Torvani"
             title="The Difference Is in the Details"
             subtitle="We don't cut corners. We don't rush. We don't compromise. Here's what sets us apart."
+            variant="dark"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -204,20 +194,31 @@ export default function HomePage() {
               },
             ].map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <div className="glass-card p-8 h-full group hover:border-gold-500/20 transition-all duration-500">
-                  <div className="text-gold-400 mb-5 group-hover:text-gold-300 transition-colors duration-300">
+                <div className="bg-white p-8 h-full rounded-2xl shadow-sm hover:shadow-md border border-black/5 transition-all duration-500 group">
+                  <div className="text-gold-600 mb-5 group-hover:text-gold-500 transition-colors duration-300">
                     {item.icon}
                   </div>
-                  <h3 className="font-display text-xl font-bold text-ivory-50 mb-3">
+                  <h3 className="font-display text-xl font-bold text-obsidian mb-3">
                     {item.title}
                   </h3>
-                  <p className="font-body text-sm text-ivory-400 leading-relaxed">
+                  <p className="font-body text-sm text-obsidian-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
               </AnimatedSection>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── Quote Section ── */}
+      <section className="py-20 md:py-32 bg-black relative flex items-center justify-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <AnimatedSection>
+            <p className="font-colbiac text-4xl md:text-6xl lg:text-[5.5rem] text-ivory-50 leading-relaxed md:leading-tight">
+              If comparable, it is no longer Bugatti
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
