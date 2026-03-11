@@ -130,7 +130,7 @@ export default function Navbar() {
                         >
                             (602) 111-2222
                         </a>
-                        <Button href="/booking" variant={isMenuOpen ? "dark" : "solid"} size="sm" className="hidden sm:inline-flex">
+                        <Button href="/booking" variant={isMenuOpen ? "dark" : "solid"} size="sm" className="!px-3 !py-1.5 !text-[10px] md:!px-5 md:!py-2.5 md:!text-xs">
                             Reserve
                         </Button>
                     </div>
