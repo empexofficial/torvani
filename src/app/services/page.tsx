@@ -26,6 +26,9 @@ export default function ServicesPage() {
             {/* Services Grid */}
             <section className="pb-24 md:pb-32 bg-black">
                 <div className="max-w-5xl mx-auto px-6">
+                    <div className="flex flex-col items-center mb-8">
+                        <div className="w-px h-16 bg-gradient-to-b from-white/60 to-transparent animate-pulse" />
+                    </div>
                     <SectionTitle
                         title="Signature Services"
                     />
