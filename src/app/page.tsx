@@ -42,6 +42,9 @@ export default function HomePage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
           <AnimatedSection className="max-w-5xl mx-auto flex flex-col items-center mt-16 md:mt-24">
+            <span className="block text-4xl md:text-5xl lg:text-6xl font-colbiac text-white mb-4 lowercase first-letter:uppercase drop-shadow-md">
+              Auto Detailing Done Right
+            </span>
             <h1 className="font-display text-5xl md:text-7xl lg:text-[6rem] font-bold text-white mb-6 leading-none tracking-wide uppercase">
               Your Car, Our Canvas
             </h1>
