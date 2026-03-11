@@ -72,7 +72,7 @@ export default function Navbar() {
 
                     {/* Right — Book Now */}
                     <div className="flex-1 flex items-center justify-end">
-                        <Button href="/booking" size="sm">
+                        <Button href="/booking" variant="solid" size="sm">
                             Book Now
                         </Button>
                     </div>
@@ -128,7 +128,7 @@ export default function Navbar() {
                                 transition={{ delay: 0.4 }}
                                 className="mt-4"
                             >
-                                <Button href="/booking" size="lg">
+                                <Button href="/booking" variant="solid" size="lg">
                                     Book Your Detail
                                 </Button>
                             </motion.div>

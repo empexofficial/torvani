@@ -3,7 +3,7 @@ import Link from "next/link";
 interface ButtonProps {
     children: React.ReactNode;
     href?: string;
-    variant?: "primary" | "outline" | "ghost";
+    variant?: "primary" | "outline" | "ghost" | "solid";
     size?: "sm" | "md" | "lg";
     className?: string;
     onClick?: () => void;
@@ -33,6 +33,8 @@ export default function Button({
     const variantStyles = {
         primary:
             "border-2 border-white/50 text-white hover:bg-white hover:text-obsidian-900 hover:border-white shadow-sm hover:shadow-md",
+        solid:
+            "bg-white text-obsidian-900 hover:bg-white/90 border-2 border-white shadow-sm hover:shadow-md",
         outline:
             "border-2 border-white/50 text-white hover:border-white hover:bg-white/5",
         ghost:
