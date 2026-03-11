@@ -26,54 +26,34 @@ export default function HomePage() {
   return (
     <div className="page-transition">
       {/* ── Hero Section ── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-obsidian-300 via-obsidian to-obsidian-400" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
         <div
-          className="absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage:
-              "radial-gradient(ellipse at 60% 40%, #c78918 0%, transparent 60%)",
-          }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/images/gallery/exterior-1.jpg')" }}
         />
-        {/* Grid pattern */}
-        <div
-          className="absolute inset-0 opacity-[0.02]"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-            backgroundSize: "80px 80px",
-          }}
-        />
+        {/* Dark Overlay for text readability */}
+        <div className="absolute inset-0 bg-obsidian-900/60" />
 
-        <div className="relative max-w-7xl mx-auto px-6 py-32 md:py-40 w-full">
-          <AnimatedSection className="max-w-4xl">
-            <span className="inline-block text-3xl font-colbiac text-gold-400 mb-6 lowercase first-letter:uppercase">
-              Premium Automotive Care
-            </span>
-            <h1 className="font-display text-5xl md:text-6xl lg:text-8xl font-bold text-ivory-50 mb-6 leading-[1.05] tracking-tight">
-              Your Car,
-              <br />
-              <span className="gold-gradient-text">Our Canvas</span>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
+          <AnimatedSection className="max-w-5xl mx-auto flex flex-col items-center mt-16 md:mt-24">
+            <h1 className="font-display text-5xl md:text-7xl lg:text-[6rem] font-bold text-white mb-6 leading-none tracking-wide uppercase">
+              Your Car, Our Canvas
             </h1>
-            <p className="font-body text-lg md:text-xl text-ivory-300 max-w-xl mb-10 leading-relaxed">
-              Obsessive craftsmanship meets automotive excellence. We don&apos;t
-              just detail vehicles — we elevate them to art.
+            <p className="font-body text-xs md:text-sm text-white/90 tracking-[0.2em] md:tracking-[0.25em] uppercase max-w-2xl mb-12 leading-relaxed">
+              Obsessive craftsmanship meets automotive excellence. We don&apos;t just detail vehicles — we elevate them to art.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Button href="/booking" size="lg">
+            <div className="flex justify-center">
+              <Button href="/booking" variant="outline" className="rounded-full !px-10 !py-3.5 text-xs tracking-widest uppercase border-white/50 text-white hover:bg-white hover:text-obsidian-900 hover:border-white transition-all duration-300">
                 Book Your Detail
-              </Button>
-              <Button href="/services" variant="outline" size="lg">
-                Explore Services
               </Button>
             </div>
           </AnimatedSection>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="w-px h-16 bg-gradient-to-b from-gold-400/60 to-transparent animate-pulse" />
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
+          <div className="w-px h-16 bg-gradient-to-b from-white/60 to-transparent animate-pulse" />
         </div>
       </section>
 
