@@ -65,7 +65,7 @@ export default function Navbar() {
     return (
         <>
             <nav
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isMenuOpen ? "bg-white border-b border-obsidian/5 py-3" : isScrolled
                     ? "bg-obsidian/95 backdrop-blur-xl border-b border-white/5 py-3"
                     : "bg-transparent py-5"
                     }`}
@@ -75,7 +75,8 @@ export default function Navbar() {
                     <div className="flex-1 flex items-center">
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            className="relative z-10 p-2 -ml-2 flex items-center gap-3 text-ivory-100 hover:text-gold-200 transition-colors cursor-pointer group"
+                            className={`relative z-10 p-2 -ml-2 flex items-center gap-3 transition-colors cursor-pointer group ${isMenuOpen ? "text-obsidian" : "text-ivory-100 hover:text-gold-200"
+                                }`}
                             aria-label="Toggle menu"
                         >
                             <div className="relative w-6 h-6 flex items-center justify-center">
@@ -114,7 +115,8 @@ export default function Navbar() {
 
                     {/* Center — Logo */}
                     <Link href="/" className="relative z-10">
-                        <span className="font-display text-2xl md:text-3xl tracking-[0.2em] uppercase text-ivory-50">
+                        <span className={`font-display text-2xl md:text-3xl tracking-[0.2em] uppercase transition-colors ${isMenuOpen ? "text-obsidian" : "text-ivory-50"
+                            }`}>
                             Torvani
                         </span>
                     </Link>
@@ -123,11 +125,12 @@ export default function Navbar() {
                     <div className="flex-1 flex items-center justify-end gap-8">
                         <a
                             href="tel:+16021112222"
-                            className="hidden md:block font-body text-[11px] font-bold tracking-[0.2em] uppercase text-white hover:text-gold-200 transition-colors"
+                            className={`hidden md:block font-body text-[11px] font-bold tracking-[0.2em] uppercase transition-colors ${isMenuOpen ? "text-obsidian hover:text-gold-600" : "text-white hover:text-gold-200"
+                                }`}
                         >
                             (602) 111-2222
                         </a>
-                        <Button href="/booking" variant="solid" size="sm" className="hidden sm:inline-flex">
+                        <Button href="/booking" variant={isMenuOpen ? "dark" : "solid"} size="sm" className="hidden sm:inline-flex">
                             Reserve
                         </Button>
                     </div>
@@ -142,14 +145,14 @@ export default function Navbar() {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                        className="fixed inset-0 z-40 bg-obsidian flex flex-col pt-24 md:pt-0"
+                        className="fixed inset-0 z-40 flex flex-col pt-24 md:pt-0"
                     >
-                        {/* Backdrop with subtle gradient */}
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-obsidian-lighter/20 via-obsidian to-obsidian" />
+                        {/* Base Backdrop (visible on mobile or briefly during transition) */}
+                        <div className="absolute inset-0 bg-white" />
 
                         <div className="relative h-full w-full grid grid-cols-1 md:grid-cols-2 gap-0">
-                            {/* Left Column: Navigation */}
-                            <div className="flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12 md:py-0 overflow-y-auto custom-scrollbar">
+                            {/* Left Column: Navigation (White background) */}
+                            <div className="flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12 md:py-0 overflow-y-auto custom-scrollbar relative z-10 bg-white">
                                 <nav className="space-y-12">
                                     {menuGroups.map((group, idx) => (
                                         <div key={group.category} className="space-y-6">
@@ -157,7 +160,7 @@ export default function Navbar() {
                                                 initial={{ opacity: 0, x: -10 }}
                                                 animate={{ opacity: 1, x: 0 }}
                                                 transition={{ delay: 0.2 + idx * 0.1 }}
-                                                className="font-display text-[11px] tracking-[0.4em] uppercase text-ivory-400/60"
+                                                className="font-display text-[11px] tracking-[0.4em] uppercase text-obsidian/40"
                                             >
                                                 {group.category}
                                             </motion.p>
@@ -173,10 +176,10 @@ export default function Navbar() {
                                                             href={link.href}
                                                             onMouseEnter={() => setActiveImage(link.image)}
                                                             onClick={() => setIsMenuOpen(false)}
-                                                            className={`group relative inline-flex items-center gap-4 py-1 font-display text-2xl md:text-3xl lg:text-4xl tracking-wider uppercase transition-all duration-300 ${pathname === link.href ? "text-white" : "text-ivory-300 hover:text-white"
+                                                            className={`group relative inline-flex items-center gap-4 py-1 font-display text-2xl md:text-3xl lg:text-4xl tracking-wider uppercase transition-all duration-300 ${pathname === link.href ? "text-obsidian" : "text-obsidian/60 hover:text-obsidian"
                                                                 }`}
                                                         >
-                                                            <span className={`h-px w-0 bg-gold-400 group-hover:w-8 transition-all duration-500 ${pathname === link.href ? "w-8" : ""}`} />
+                                                            <span className={`h-px w-0 bg-gold-600 group-hover:w-8 transition-all duration-500 ${pathname === link.href ? "w-8" : ""}`} />
                                                             {link.label}
                                                         </Link>
                                                     </motion.li>
@@ -191,17 +194,17 @@ export default function Navbar() {
                                     initial={{ opacity: 0 }}
                                     animate={{ opacity: 1 }}
                                     transition={{ delay: 0.7 }}
-                                    className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-6"
+                                    className="mt-16 pt-8 border-t border-obsidian/5 flex flex-col sm:flex-row sm:items-center justify-between gap-6"
                                 >
                                     <div>
-                                        <p className="font-display text-[10px] tracking-[0.2em] uppercase text-ivory-500 mb-2">Location</p>
-                                        <p className="font-body text-sm text-ivory-100">Scottsdale, Arizona</p>
+                                        <p className="font-display text-[10px] tracking-[0.2em] uppercase text-obsidian/40 mb-2">Location</p>
+                                        <p className="font-body text-sm text-obsidian/80">Scottsdale, Arizona</p>
                                     </div>
                                     <div>
-                                        <p className="font-display text-[10px] tracking-[0.2em] uppercase text-ivory-500 mb-2">Connect</p>
+                                        <p className="font-display text-[10px] tracking-[0.2em] uppercase text-obsidian/40 mb-2">Connect</p>
                                         <div className="flex gap-4">
-                                            <a href="#" className="font-body text-sm text-ivory-100 hover:text-gold-200 transition-colors">Instagram</a>
-                                            <a href="#" className="font-body text-sm text-ivory-100 hover:text-gold-200 transition-colors">Facebook</a>
+                                            <a href="#" className="font-body text-sm text-obsidian/80 hover:text-gold-600 transition-colors">Instagram</a>
+                                            <a href="#" className="font-body text-sm text-obsidian/80 hover:text-gold-600 transition-colors">Facebook</a>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -218,29 +221,49 @@ export default function Navbar() {
                                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                                         className="absolute inset-0"
                                     >
-                                        {/* Image overlay for better text contrast/depth */}
-                                        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-transparent to-transparent z-10" />
-                                        <div className="absolute inset-0 bg-black/20 z-10" />
+                                        <div className="absolute inset-0 bg-black/10 z-10" />
 
                                         <img
                                             src={activeImage}
                                             alt="Featured content"
-                                            className="h-full w-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-1000"
+                                            className="h-full w-full object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-1000"
                                         />
-
-                                        {/* Branding watermark */}
-                                        <div className="absolute bottom-12 right-12 z-20 overflow-hidden">
-                                            <motion.p
-                                                initial={{ y: "100%" }}
-                                                animate={{ y: 0 }}
-                                                transition={{ delay: 0.5, duration: 0.8 }}
-                                                className="font-display text-[120px] leading-none tracking-tighter text-white/5 uppercase select-none font-black"
-                                            >
-                                                Torvani
-                                            </motion.p>
-                                        </div>
                                     </motion.div>
                                 </AnimatePresence>
+
+                                {/* Persistent branding watermark */}
+                                <div className="absolute bottom-12 right-12 z-20 overflow-hidden pointer-events-none">
+                                    <motion.p
+                                        initial={{ y: "100%" }}
+                                        animate={{ y: 0 }}
+                                        transition={{ delay: 0.5, duration: 0.8 }}
+                                        className="font-display text-[120px] leading-none tracking-tighter text-white/10 uppercase select-none font-black"
+                                    >
+                                        Torvani
+                                    </motion.p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Adjust Header/Toolbar items for visibility when menu is open */}
+                        <div className="absolute top-0 left-0 right-0 z-50 pointer-events-none">
+                            <div className="max-w-8xl mx-auto px-6 py-5 md:py-3 flex items-center justify-between">
+                                {/* This matches the nav structure but only for visual sync during open state */}
+                                <div className="flex-1" />
+                                <div className="hidden md:block" />
+                                <div className="flex-1 flex justify-end">
+                                    <style jsx global>{`
+                                        .menu-open-header-sync {
+                                            color: #111111 !important;
+                                        }
+                                        .menu-open-header-sync button {
+                                            color: #111111 !important;
+                                        }
+                                        .menu-open-header-sync a {
+                                            color: #111111 !important;
+                                        }
+                                    `}</style>
+                                </div>
                             </div>
                         </div>
                     </motion.div>
