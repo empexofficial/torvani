@@ -158,6 +158,9 @@ export default function HomePage() {
       {/* ── Why Choose Torvani ── */}
       <section className="py-24 md:py-32 bg-ivory-300">
         <div className="max-w-8xl mx-auto px-6">
+          <div className="flex flex-col items-center mb-8">
+            <div className="w-px h-16 bg-gradient-to-b from-obsidian/60 to-transparent animate-pulse" />
+          </div>
           <SectionTitle
             title="The Torvani Difference"
             subtitle="We don't cut corners. We don't rush. We don't compromise."
@@ -212,9 +215,11 @@ export default function HomePage() {
       {/* ── Process / Craftsmanship ── */}
       <section className="py-24 md:py-32 bg-obsidian-200/50">
         <div className="max-w-8xl mx-auto px-6">
+          <div className="flex flex-col items-center mb-8">
+            <div className="w-px h-16 bg-gradient-to-b from-white/60 to-transparent animate-pulse" />
+          </div>
           <SectionTitle
             title="Craftsmanship, Refined"
-            subtitle="Every Torvani detail follows a meticulous process designed to deliver perfection at every stage."
           />
           <div className="max-w-3xl mx-auto">
             {processSteps.map((step, index) => (
@@ -248,9 +253,11 @@ export default function HomePage() {
       {/* ── Testimonials Preview ── */}
       <section className="py-24 md:py-32">
         <div className="max-w-8xl mx-auto px-6">
+          <div className="flex flex-col items-center mb-8">
+            <div className="w-px h-16 bg-gradient-to-b from-white/60 to-transparent animate-pulse" />
+          </div>
           <SectionTitle
             title="What Our Clients Say"
-            subtitle="Don't take our word for it. Hear from the owners who've experienced the Torvani standard."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.slice(0, 3).map((testimonial, index) => (
@@ -276,9 +283,11 @@ export default function HomePage() {
       {/* ── FAQ ── */}
       <section className="py-24 md:py-32 bg-black">
         <div className="max-w-3xl mx-auto px-6">
+          <div className="flex flex-col items-center mb-8">
+            <div className="w-px h-16 bg-gradient-to-b from-white/60 to-transparent animate-pulse" />
+          </div>
           <SectionTitle
             title="Frequently Asked"
-            subtitle="Everything you need to know about our services, process, and what makes Torvani different."
           />
           <FAQAccordion items={homeFAQ} />
         </div>
