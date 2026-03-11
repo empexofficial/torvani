@@ -27,11 +27,16 @@ export default function HomePage() {
     <div className="page-transition">
       {/* ── Hero Section ── */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/gallery/exterior-1.jpg')" }}
-        />
+        {/* Background Video */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <iframe
+            src="https://player.vimeo.com/video/1172397411?background=1&autoplay=1&loop=1&byline=0&title=0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
+            tabIndex={-1}
+            aria-hidden="true"
+          />
+        </div>
         {/* Dark Overlay for text readability */}
         <div className="absolute inset-0 bg-obsidian-900/60" />
 
