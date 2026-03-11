@@ -147,7 +147,7 @@ export default function Navbar() {
                         {/* Backdrop with subtle gradient */}
                         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-obsidian-lighter/20 via-obsidian to-obsidian" />
 
-                        <div className="relative h-full w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-[1.2fr_1.8fr] gap-0">
+                        <div className="relative h-full w-full grid grid-cols-1 md:grid-cols-2 gap-0">
                             {/* Left Column: Navigation */}
                             <div className="flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12 md:py-0 overflow-y-auto custom-scrollbar">
                                 <nav className="space-y-12">
@@ -208,7 +208,7 @@ export default function Navbar() {
                             </div>
 
                             {/* Right Column: Dynamic Image Wrapper */}
-                            <div className="hidden md:block relative h-full w-full overflow-hidden bg-obsidian-darker border-l border-white/5">
+                            <div className="hidden md:block relative h-full w-full overflow-hidden bg-obsidian-darker">
                                 <AnimatePresence mode="wait">
                                     <motion.div
                                         key={activeImage}
