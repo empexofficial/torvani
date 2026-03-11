@@ -111,14 +111,14 @@ export default function HomePage() {
       </section>
 
       {/* ── Services Preview ── */}
-      <section className="py-24 md:py-32 bg-obsidian-200/50">
+      <section className="py-24 md:py-32 bg-black">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Your Torvani journey starts now."
             title="Signature Services"
             subtitle="Each service is executed with surgical precision, premium products, and an unwavering commitment to excellence."
           />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {services.map((service, index) => (
               <ServiceCard
                 key={service.id}
