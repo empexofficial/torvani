@@ -35,7 +35,7 @@ export default function FloatingActionButtons() {
                     {/* Booking Button */}
                     <Link
                         href="/booking"
-                        className="flex items-center gap-2 px-6 py-2.5 bg-white text-obsidian rounded-full font-display text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-gold-500 hover:text-white transition-all duration-300"
+                        className="flex items-center gap-2 px-6 py-2.5 bg-white text-obsidian border border-transparent rounded-full font-display text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-transparent hover:border-white hover:text-white transition-all duration-300"
                     >
                         <Calendar className="w-3.5 h-3.5" />
                         <span>Book</span>
@@ -47,9 +47,9 @@ export default function FloatingActionButtons() {
                     {/* Call Button */}
                     <a
                         href="tel:+16021112222"
-                        className="flex items-center gap-2 px-6 py-2.5 text-white/90 hover:text-white rounded-full font-display text-[10px] tracking-[0.2em] uppercase font-bold transition-all duration-300 group"
+                        className="flex items-center gap-2 px-6 py-2.5 bg-white text-obsidian border border-transparent rounded-full font-display text-[10px] tracking-[0.2em] uppercase font-bold hover:bg-transparent hover:border-white hover:text-white transition-all duration-300"
                     >
-                        <Phone className="w-3.5 h-3.5 group-hover:text-gold-400 transition-colors" />
+                        <Phone className="w-3.5 h-3.5" />
                         <span>Call</span>
                     </a>
                 </motion.div>
