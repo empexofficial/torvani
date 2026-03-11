@@ -127,6 +127,34 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Gallery Preview ── */}
+      <section className="py-24 md:py-32 bg-obsidian-200/50">
+        <div className="max-w-8xl mx-auto px-6">
+          <SectionTitle
+            label="Our Work"
+            title="The Portfolio"
+            subtitle="A curated selection of transformations and the artistry behind every detail."
+          />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {galleryImages.slice(0, 4).map((image, index) => (
+              <GalleryItem
+                key={image.id}
+                src={image.src}
+                alt={image.alt}
+                title={image.title}
+                category={image.category}
+                index={index}
+              />
+            ))}
+          </div>
+          <AnimatedSection className="text-center mt-12">
+            <Button href="/gallery" variant="outline">
+              View Full Gallery
+            </Button>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ── Quote Section ── */}
       <section className="py-20 md:py-32 bg-black relative flex items-center justify-center">
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
@@ -252,34 +280,6 @@ export default function HomePage() {
           <AnimatedSection className="text-center mt-12">
             <Button href="/testimonials" variant="outline">
               Read More Reviews
-            </Button>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ── Gallery Preview ── */}
-      <section className="py-24 md:py-32 bg-obsidian-200/50">
-        <div className="max-w-8xl mx-auto px-6">
-          <SectionTitle
-            label="Our Work"
-            title="The Portfolio"
-            subtitle="A curated selection of transformations and the artistry behind every detail."
-          />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {galleryImages.slice(0, 4).map((image, index) => (
-              <GalleryItem
-                key={image.id}
-                src={image.src}
-                alt={image.alt}
-                title={image.title}
-                category={image.category}
-                index={index}
-              />
-            ))}
-          </div>
-          <AnimatedSection className="text-center mt-12">
-            <Button href="/gallery" variant="outline">
-              View Full Gallery
             </Button>
           </AnimatedSection>
         </div>
