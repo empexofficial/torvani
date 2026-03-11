@@ -39,6 +39,10 @@ export default function ServicesPage() {
                                 description={service.shortDescription}
                                 href={service.href}
                                 icon={service.icon}
+                                image={service.image}
+                                badge={service.badge}
+                                price={service.price}
+                                modelName={service.modelName}
                                 index={index}
                             />
                         ))}

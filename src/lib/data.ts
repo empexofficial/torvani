@@ -9,6 +9,10 @@ export interface Service {
     shortDescription: string;
     icon: string;
     href: string;
+    image: string;
+    badge: string;
+    price: string;
+    modelName: string;
 }
 
 export interface Testimonial {
@@ -66,6 +70,10 @@ export const services: Service[] = [
             "Meticulous interior and exterior detailing that restores your vehicle to showroom perfection. Every surface, every crevice — elevated.",
         icon: "sparkles",
         href: "/services/auto-detailing",
+        image: "/images/services/detailing.png",
+        badge: "Artisan Standard",
+        price: "From $299",
+        modelName: "Detailing",
     },
     {
         id: "ceramic-coating",
@@ -75,6 +83,10 @@ export const services: Service[] = [
             "Laboratory-grade ceramic protection that delivers unmatched gloss, hydrophobic performance, and long-term paint preservation.",
         icon: "shield",
         href: "/services/ceramic-coating",
+        image: "/images/services/ceramic.png",
+        badge: "Permanent Protection",
+        price: "From $799",
+        modelName: "Ceramic",
     },
 ];
 

@@ -114,7 +114,7 @@ export default function HomePage() {
       <section className="py-24 md:py-32 bg-obsidian-200/50">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
-            label="Our Services"
+            label="Your Torvani journey starts now."
             title="Signature Services"
             subtitle="Each service is executed with surgical precision, premium products, and an unwavering commitment to excellence."
           />
@@ -126,6 +126,10 @@ export default function HomePage() {
                 description={service.shortDescription}
                 href={service.href}
                 icon={service.icon}
+                image={service.image}
+                badge={service.badge}
+                price={service.price}
+                modelName={service.modelName}
                 index={index}
               />
             ))}
