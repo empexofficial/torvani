@@ -121,11 +121,6 @@ export default function HomePage() {
               />
             ))}
           </div>
-          <AnimatedSection className="text-center mt-12">
-            <Button href="/services" variant="outline">
-              View All Services
-            </Button>
-          </AnimatedSection>
         </div>
       </section>
 
