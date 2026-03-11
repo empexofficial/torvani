@@ -33,7 +33,7 @@ export default function GalleryPageClient() {
 
             {/* Filter tabs */}
             <section className="py-12 border-b border-white/5">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-8xl mx-auto px-6">
                     <div className="flex flex-wrap justify-center gap-3">
                         {categories.map((cat) => (
                             <button
@@ -53,7 +53,7 @@ export default function GalleryPageClient() {
 
             {/* Gallery Grid */}
             <section className="py-16 md:py-24">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-8xl mx-auto px-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {filteredImages.map((image, index) => (
                             <GalleryItem

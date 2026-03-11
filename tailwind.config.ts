@@ -64,6 +64,9 @@ const config: Config = {
                 "premium-card":
                     "0 4px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.05)",
             },
+            maxWidth: {
+                '8xl': '90rem', // 1440px
+            },
             animation: {
                 "fade-in": "fadeIn 0.6s ease-out",
                 "slide-up": "slideUp 0.6s ease-out",

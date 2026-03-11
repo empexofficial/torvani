@@ -40,7 +40,7 @@ export default function HomePage() {
         {/* Dark Overlay for text readability */}
         <div className="absolute inset-0 bg-obsidian-900/60" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-center">
+        <div className="relative z-10 max-w-8xl mx-auto px-6 w-full text-center">
           <AnimatedSection className="max-w-5xl mx-auto flex flex-col items-center mt-16 md:mt-24">
             <span className="block text-4xl md:text-5xl lg:text-6xl font-colbiac text-white mb-4 lowercase first-letter:uppercase drop-shadow-md">
               Auto Detailing Done Right
@@ -67,7 +67,7 @@ export default function HomePage() {
 
       {/* ── Brand Positioning ── */}
       <section className="py-24 md:py-32 bg-black flex items-center justify-center overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 w-full">
+        <div className="max-w-8xl mx-auto px-6 w-full">
           <AnimatedSection className="relative aspect-[16/9] md:aspect-[21/9] w-full rounded-2xl overflow-hidden shadow-2xl group">
             {/* Background Image */}
             <div
@@ -112,7 +112,7 @@ export default function HomePage() {
 
       {/* ── Services Preview ── */}
       <section className="py-24 md:py-32 bg-obsidian-200/50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Our Services"
             title="Signature Services"
@@ -140,7 +140,7 @@ export default function HomePage() {
 
       {/* ── Why Choose Torvani ── */}
       <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Why Torvani"
             title="The Difference Is in the Details"
@@ -193,7 +193,7 @@ export default function HomePage() {
 
       {/* ── Process / Craftsmanship ── */}
       <section className="py-24 md:py-32 bg-obsidian-200/50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Our Process"
             title="Craftsmanship, Refined"
@@ -230,7 +230,7 @@ export default function HomePage() {
 
       {/* ── Testimonials Preview ── */}
       <section className="py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Client Experiences"
             title="What Our Clients Say"
@@ -259,7 +259,7 @@ export default function HomePage() {
 
       {/* ── Gallery Preview ── */}
       <section className="py-24 md:py-32 bg-obsidian-200/50">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Our Work"
             title="The Portfolio"

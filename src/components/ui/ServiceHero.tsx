@@ -28,7 +28,7 @@ export default function ServiceHero({
                 }}
             />
 
-            <div className="relative max-w-7xl mx-auto px-6 py-32 md:py-40 w-full">
+            <div className="relative max-w-8xl mx-auto px-6 py-32 md:py-40 w-full">
                 <AnimatedSection className="max-w-3xl">
                     <span className="inline-block text-3xl font-colbiac text-gold-400 mb-6 lowercase first-letter:uppercase">
                         {subtitle}

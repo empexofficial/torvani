@@ -33,7 +33,7 @@ export default function CeramicCoatingPage() {
 
             {/* What is Ceramic Coating */}
             <section className="py-24 md:py-32">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-8xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <AnimatedSection>
                             <span className="block text-3xl font-colbiac text-gold-400 mb-4 lowercase first-letter:uppercase">
@@ -76,7 +76,7 @@ export default function CeramicCoatingPage() {
 
             {/* Benefits */}
             <section className="py-24 md:py-32 bg-obsidian-200/50">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-8xl mx-auto px-6">
                     <SectionTitle
                         label="Protection Benefits"
                         title="Why Ceramic Coating"
@@ -236,7 +236,7 @@ export default function CeramicCoatingPage() {
 
             {/* Package Tiers */}
             <section className="py-24 md:py-32">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-8xl mx-auto px-6">
                     <SectionTitle
                         label="Packages"
                         title="Ceramic Coating Packages"

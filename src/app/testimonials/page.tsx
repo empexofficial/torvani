@@ -43,7 +43,7 @@ export default function TestimonialsPage() {
 
             {/* All Testimonials */}
             <section className="py-12 md:py-16 bg-obsidian-200/50">
-                <div className="max-w-7xl mx-auto px-6 py-12">
+                <div className="max-w-8xl mx-auto px-6 py-12">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {testimonials.map((testimonial, index) => (
                             <TestimonialCard

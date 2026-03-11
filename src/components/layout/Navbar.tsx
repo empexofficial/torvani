@@ -44,7 +44,7 @@ export default function Navbar() {
                     : "bg-transparent py-5"
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
+                <div className="max-w-8xl mx-auto px-6 flex items-center justify-between">
                     {/* Left — Hamburger Menu */}
                     <div className="flex-1 flex items-center">
                         <button

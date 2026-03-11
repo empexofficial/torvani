@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function BookingPage() {
     return (
         <div className="page-transition pt-28 pb-24 md:pt-36 md:pb-32">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-8xl mx-auto px-6">
                 {/* Page Header */}
                 <div className="text-center mb-12">
                     <span className="inline-block text-3xl font-colbiac text-gold-400 mb-4 lowercase first-letter:uppercase">
