@@ -56,11 +56,8 @@ export default function ServiceCard({
                     <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 uppercase tracking-wide transition-transform duration-500 group-hover:-translate-y-1">
                         {title}
                     </h3>
-                    <p className="text-white/60 font-body text-sm leading-relaxed mb-6 line-clamp-2 transition-transform duration-500 group-hover:-translate-y-1 opacity-100 group-hover:opacity-90">
-                        {description}
-                    </p>
 
-                    <div className="flex items-center justify-between pt-6 border-t border-white/10 transition-transform duration-500 group-hover:-translate-y-1">
+                    <div className="flex items-center justify-between pt-2 transition-transform duration-500 group-hover:-translate-y-1">
                         <div className="flex flex-col">
                             <span className="text-[10px] text-white/40 uppercase tracking-[0.15em] font-body mb-1">Starting At</span>
                             <span className="text-gold-400 font-display font-bold text-lg tracking-wider">{price.toUpperCase()}</span>

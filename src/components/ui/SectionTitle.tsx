@@ -26,7 +26,6 @@ export default function SectionTitle({
                     {label}
                 </span>
             )}
-            <div className="gold-line mx-auto" style={align === "left" ? { margin: 0 } : {}} />
             <h2 className="font-display text-5xl md:text-7xl lg:text-[7.5rem] font-bold text-ivory-50 leading-[0.9] tracking-tighter uppercase">
                 {title}
             </h2>

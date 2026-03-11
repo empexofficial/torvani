@@ -27,9 +27,7 @@ export default function ServicesPage() {
             <section className="pb-24 md:pb-32 bg-black">
                 <div className="max-w-5xl mx-auto px-6">
                     <SectionTitle
-                        label="What We Offer"
                         title="Signature Services"
-                        subtitle="Select a service to explore our packages, process, and what makes each offering exceptional."
                     />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {services.map((service, index) => (

@@ -103,9 +103,7 @@ export default function HomePage() {
       <section className="pb-24 md:pb-32 bg-black">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
-            label="Your Torvani journey starts now."
             title="Signature Services"
-            subtitle="Each service is executed with surgical precision, premium products, and an unwavering commitment to excellence."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
             {services.map((service, index) => (
