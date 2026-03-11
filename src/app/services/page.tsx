@@ -24,7 +24,7 @@ export default function ServicesPage() {
             />
 
             {/* Services Grid */}
-            <section className="py-24 md:py-32 bg-black">
+            <section className="pb-24 md:pb-32 bg-black">
                 <div className="max-w-5xl mx-auto px-6">
                     <SectionTitle
                         label="What We Offer"

@@ -100,7 +100,7 @@ export default function HomePage() {
       </section>
 
       {/* ── Services Preview ── */}
-      <section className="py-24 md:py-32 bg-black">
+      <section className="pb-24 md:pb-32 bg-black">
         <div className="max-w-8xl mx-auto px-6">
           <SectionTitle
             label="Your Torvani journey starts now."
