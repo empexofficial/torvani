@@ -51,7 +51,7 @@ export default function ServicesPage() {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <AnimatedSection>
-                            <span className="text-xs font-body font-semibold tracking-[0.3em] uppercase text-gold-400 mb-4 block">
+                            <span className="block text-3xl font-colbiac text-gold-400 mb-4 lowercase first-letter:uppercase">
                                 The Professional Advantage
                             </span>
                             <div className="gold-line mb-8" />

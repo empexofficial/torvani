@@ -13,7 +13,7 @@ export default function BookingPage() {
             <div className="max-w-7xl mx-auto px-6">
                 {/* Page Header */}
                 <div className="text-center mb-12">
-                    <span className="inline-block text-xs font-body font-semibold tracking-[0.3em] uppercase text-gold-400 mb-4">
+                    <span className="inline-block text-3xl font-colbiac text-gold-400 mb-4 lowercase first-letter:uppercase">
                         Reserve Your Appointment
                     </span>
                     <div className="gold-line mx-auto mb-6" />

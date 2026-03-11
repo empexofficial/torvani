@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
         <div className="page-transition pt-32 pb-24 md:pt-40 md:pb-32">
             <div className="max-w-3xl mx-auto px-6">
                 <div className="mb-12">
-                    <span className="text-xs font-body font-semibold tracking-[0.3em] uppercase text-gold-400 mb-4 block">
+                    <span className="block text-3xl font-colbiac text-gold-400 mb-4 lowercase first-letter:uppercase">
                         Legal
                     </span>
                     <div className="gold-line mb-8" />

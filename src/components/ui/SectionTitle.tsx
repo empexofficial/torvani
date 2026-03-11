@@ -22,7 +22,7 @@ export default function SectionTitle({
             className={`flex flex-col gap-4 mb-12 md:mb-16 ${alignClass} ${className}`}
         >
             {label && (
-                <span className="text-xs font-body font-semibold tracking-[0.3em] uppercase text-gold-400">
+                <span className="inline-block text-3xl font-colbiac text-gold-400 lowercase first-letter:uppercase">
                     {label}
                 </span>
             )}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -9,6 +10,13 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
+
+const colbiac = localFont({
+  src: "./fonts/colbiac-colbiac-regular-400.otf",
+  variable: "--font-colbiac",
+  display: "swap",
+});
+
 
 export const metadata: Metadata = {
   title: {
@@ -63,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${colbiac.variable}`}>
       <head>
         {/* Typekit font for display headings */}
         <link rel="stylesheet" href="https://use.typekit.net/cmz1ykq.css" />

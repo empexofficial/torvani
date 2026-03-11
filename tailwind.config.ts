@@ -47,6 +47,7 @@ const config: Config = {
             fontFamily: {
                 display: ['"din-condensed"', "sans-serif"],
                 body: ["Inter", "system-ui", "sans-serif"],
+                colbiac: ["var(--font-colbiac)", "cursive"],
             },
             backgroundImage: {
                 "gold-gradient": "linear-gradient(135deg, #c78918, #fcdc68)",
