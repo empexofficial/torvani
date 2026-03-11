@@ -130,12 +130,15 @@ export default function HomePage() {
       {/* ── Gallery Preview ── */}
       <section className="py-24 md:py-32 bg-white">
         <div className="max-w-8xl mx-auto px-6">
+          <div className="flex flex-col items-center mb-8">
+            <div className="w-px h-16 bg-gradient-to-b from-obsidian/60 to-transparent animate-pulse" />
+          </div>
           <SectionTitle
             title="The Portfolio"
             variant="dark"
           />
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {galleryImages.slice(0, 4).map((image, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {galleryImages.slice(0, 3).map((image, index) => (
               <GalleryItem
                 key={image.id}
                 src={image.src}
