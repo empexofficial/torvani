@@ -65,17 +65,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Quote Section ── */}
-      <section className="py-20 md:py-32 bg-black relative flex items-center justify-center">
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-          <AnimatedSection>
-            <p className="font-colbiac text-4xl md:text-6xl lg:text-[5.5rem] text-ivory-50 leading-relaxed md:leading-tight">
-              If comparable, it is no longer Bugatti
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
-
       {/* ── Brand Positioning ── */}
       <section className="py-24 md:py-32 bg-black flex items-center justify-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 w-full">
@@ -106,6 +95,17 @@ export default function HomePage() {
                 Discover the Torvani Standard
               </Button>
             </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ── Quote Section ── */}
+      <section className="py-20 md:py-32 bg-black relative flex items-center justify-center">
+        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+          <AnimatedSection>
+            <p className="font-colbiac text-4xl md:text-6xl lg:text-[5.5rem] text-ivory-50 leading-relaxed md:leading-tight">
+              If comparable, it is no longer Bugatti
+            </p>
           </AnimatedSection>
         </div>
       </section>
