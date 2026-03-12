@@ -31,7 +31,7 @@ export default function HomePage() {
         {/* Background Video */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <iframe
-            src="https://player.vimeo.com/video/1172397411?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1&playsinline=1"
+            src="https://player.vimeo.com/video/1172397411?background=1&muted=1&playsinline=1&autopause=0&app_id=122963"
             allow="autoplay; fullscreen; picture-in-picture"
             className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2"
             tabIndex={-1}
